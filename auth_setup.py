@@ -8,7 +8,12 @@ import sys
 import msal
 
 AUTHORITY  = "https://login.microsoftonline.com/organizations"
-SCOPES     = ["Mail.Read", "Mail.ReadWrite", "Mail.Send", "User.Read", "offline_access"]
+SCOPES     = [
+    "Mail.Read", "Mail.ReadWrite", "Mail.Send",
+    "Calendars.ReadWrite",
+    "Contacts.ReadWrite",
+    "User.Read", "offline_access",
+]
 CACHE_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "token_cache.json")
 
 CLIENT_ID = os.environ.get("MS_CLIENT_ID", "").strip()
