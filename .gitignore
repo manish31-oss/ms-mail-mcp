@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.env
+*.env
+# token_cache.json contains your Microsoft access/refresh tokens — never commit this
+token_cache.json
